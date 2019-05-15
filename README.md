@@ -1,2 +1,2 @@
-# openshift-origincli
-OpenShift Origin CLI 
+# openshift-okdcli
+OpenShift Kubernetes CLI
