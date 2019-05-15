@@ -8,6 +8,7 @@ ENV VERSION "<%= version %>"
 
 COPY CentOS-OpenShift-Origin.repo /etc/yum.repos.d/
 COPY CentOS-OpenShift-Origin311.repo /etc/yum.repos.d/
+ADD https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-PaaS /etc/pki/rpm-gpg/
 
 RUN yum -y --setopt tsflags=nodocs --setopt timeout=5 install \
     origin-clients-<%= version %>
