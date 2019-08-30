@@ -1,14 +1,9 @@
 FROM bcit/centos:7
-# vim: syntax=dockerfile
-
-LABEL maintainer="<%= maintainer %>"
-LABEL version="<%= version %>"
-
-ENV VERSION "<%= version %>"
+<%= snippet('labels', binding) -%>
 
 COPY CentOS-OpenShift-Origin.repo /etc/yum.repos.d/
 COPY CentOS-OpenShift-Origin311.repo /etc/yum.repos.d/
 ADD https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-PaaS /etc/pki/rpm-gpg/
 
 RUN yum -y --setopt tsflags=nodocs --setopt timeout=5 install \
-    origin-clients-<%= version %>
+    origin-clients-<%= image.labels['okd_version'] %>

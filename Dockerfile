@@ -1,10 +1,7 @@
 FROM bcit/centos:7
-# vim: syntax=dockerfile
-
 LABEL maintainer="jesse_weisner@bcit.ca"
-LABEL version="3.11.0"
-
-ENV VERSION "3.11.0"
+LABEL okd_version="3.11.0"
+LABEL build_id="1567200359"
 
 COPY CentOS-OpenShift-Origin.repo /etc/yum.repos.d/
 COPY CentOS-OpenShift-Origin311.repo /etc/yum.repos.d/

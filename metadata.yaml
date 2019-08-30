@@ -1,0 +1,9 @@
+---
+image_name: 'openshift-okdcli'
+labels:
+  maintainer: 'jesse_weisner@bcit.ca'
+  okd_version: '3.11.0'
+suffixes:
+  - '3.11'
+  - '3.11-latest'
+  - '3-latest'
